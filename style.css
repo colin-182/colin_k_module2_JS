@@ -1,0 +1,131 @@
+/*styling*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/*header and nav bar*/
+header {
+    background-color: #111827;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/*main layout*/
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    maring-bottom: 1.5rem;
+    border-radius: 6px;
+}
+
+/*form style*/
+form {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 400px;
+}
+
+input, select, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+/*workout cards*/
+#workout-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.workout-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #f9fafb;
+}
+
+.workout-card.completed {
+    background-color: #e5e7eb;
+    text-decoration: line-through;
+}
+
+/*progress bar*/
+#progress-bar-container {
+    background-color: #e5e7eb;
+    height: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #16a34a;
+    transition: width 0.3s ease;
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/*responsive design*/
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+    }
+}
